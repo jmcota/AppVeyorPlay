@@ -2,7 +2,7 @@
 
 namespace AppVeyorProject {
 
-    public class Math {
+    public class Mathy {
 
     static public int Sum(int x, int y) {
       return x + y;

@@ -17,11 +17,11 @@ namespace AppVeyorProject {
       operandTwo = 5;
     };
 
-    Because of = () => sum = Mathy.Sum(operandOne, operandTwo);
+    Because of = 
+      () => sum = Mathy.Sum(operandOne, operandTwo);
 
     It should_be_true_that_operandOne_must_be_sum_minus_operandTwo =
       () => operandOne.Should().Be(sum - operandTwo);
   }
 
 }
-

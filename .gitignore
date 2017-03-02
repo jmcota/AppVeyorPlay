@@ -10,7 +10,6 @@ TestResults
 
 # User-specific files
 *.suo
-*.sln
 *.user
 *.sln.docstates
 *.rar

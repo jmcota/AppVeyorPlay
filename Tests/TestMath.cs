@@ -8,13 +8,13 @@ namespace AppVeyorProject {
   [Subject("Math are fun")]
   public class When_making_a_sum {
 
-    static int operandOne = 9;
-    static int operandTwo = 5;
-    static int sum = 0;
+    static int operandOne = 33;
+    static int operandTwo = 11;
+    static int sum = 1242350;
 
     Establish context = () => {
-      operandOne = 9;
-      operandTwo = 5;
+      operandOne = 33;
+      operandTwo = 11;
     };
 
     Because of = 
@@ -25,6 +25,9 @@ namespace AppVeyorProject {
 
     It should_be_true_that_operandTwo_must_be_sum_minus_operandOne =
       () => operandTwo.Should().Be(sum - operandOne);
+
+    It should_be_true_that_sum_must_be_operandOne_plus_operandTwo =
+      () => sum.Should().Be(operandOne + operandTwo);
   }
 
 

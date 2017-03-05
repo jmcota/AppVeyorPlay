@@ -1,49 +1,50 @@
 ﻿# master branch configuration
 -
-branches:
-  only:
-    - master
+  branches:
+    only:
+      - master
 
-version: 1.0.{build}
+  version: 1.0.{build}
 
-clone_depth: 5
+  clone_depth: 5
 
-before_build:
-  - cmd: ECHO Starting the build ...
-  - nuget restore
+  before_build:
+    - cmd: ECHO Starting the build ...
+    - nuget restore
 
 
-skip-tags: true
+  skip-tags: true
 
-after_build:
-  - cmd: ECHO Finishing master build ...
+  after_build:
+    - cmd: ECHO Finishing master build ...
 
 
 
 # integration branch configuration
 -
-branches:
-  only:
-    - integration
+  branches:
+    only:
+      - integration
 
-version: 1.0.{build}
+  version: 1.0.{build}
 
-clone_depth: 5
+  clone_depth: 5
 
-after_build:
-  - cmd: ECHO Finishing integration build ...
+  after_build:
+    - cmd: ECHO Finishing integration build ...
 
 
 # Features and fixes branches configurations
 -
-branches:
-  except:
-    - integration
-    - master
+  branches:
+    except:
+      - integration
+      - master
 
-version: 1.0.{build}
+  version: 1.0.{build}
 
-clone_depth: 5
+  clone_depth: 5
 
-after_build:
-  - cmd: ECHO Finishing features/fixes branch build ...
+  after_build:
+    - cmd: ECHO Finishing features/fixes branch build ...
+

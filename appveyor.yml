@@ -1,14 +1,14 @@
-﻿version: 1.0.{build}
-
-clone_depth: 5
-
-skip_tags: true
-
-# master branch configuration
+﻿# master branch configuration
 -
   branches:
     only:
       - master
+
+  skip_tags: true
+
+  clone_depth: 5
+
+  version: 1.0.{build}
 
   before_build:
     - cmd: ECHO Starting the build ...
@@ -16,7 +16,6 @@ skip_tags: true
 
   after_build:
     - cmd: ECHO Finishing master build ...
-
 
 
 # integration branch configuration

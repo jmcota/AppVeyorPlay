@@ -11,7 +11,7 @@
   version: 1.0.{build}
 
   before_build:
-    - cmd: ECHO Starting the build ...
+    - cmd: ECHO Starting the build for master branch ...
     - nuget restore
 
   after_build:
@@ -24,6 +24,11 @@
     only:
       - integration
 
+
+  before_build:
+    - cmd: ECHO Starting build for integration branch ...
+    - nuget restore
+
   after_build:
     - cmd: ECHO Finishing integration build ...
 
@@ -35,6 +40,9 @@
       - integration
       - master
 
+  before_build:
+    - cmd: ECHO Starting build using features/fixes branch configuration ...
+    - nuget restore
+
   after_build:
     - cmd: ECHO Finishing features/fixes branch build ...
-

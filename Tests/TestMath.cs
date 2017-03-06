@@ -28,6 +28,10 @@ namespace AppVeyorProject {
 
     It should_be_true_that_sum_must_be_operandOne_plus_operandTwo =
       () => sum.Should().Be(operandOne + operandTwo);
+
+
+    It should_be_true_that_sum_must_be_less_than_zero =
+      () => sum.Should().BeLessThan(0);
   }
 
 
